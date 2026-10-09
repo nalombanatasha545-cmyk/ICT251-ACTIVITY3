@@ -1,0 +1,187 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>My First Web Page</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<header>
+  <h1>My First Web Page</h1>
+  <button id="theme-toggle" type="button" aria-pressed="false">Switch to Dark Mode</button>
+</header>
+
+  <nav>
+    <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  <ul id="nav-links">
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#hobbies">My Hobbies</a></li>
+      <li><a href="#learning-plan">My Learning Plan</a></li>
+      <li><a href="#photos">My Photos</a></li>
+      <li><a href="#media">My Media</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">MDN Web Docs — learn web development</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="about" class="content-section">
+      <h2>About Me</h2>
+      <p>
+        My name is Natasha Nalomba and I'm studying Computer Science at Mulungushi University.
+        I first became interested in computers because I liked figuring out how the
+        apps and websites I used every day actually worked. This semester I'm learning
+        how to build websites in my Web Technologies course, and my goal is to become
+        confident enough to build a complete website on my own by the end of it.
+      </p>
+    </section>
+
+    <section id="hobbies" class="content-section">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>listening to music</li>
+        <li>watching movies</li>
+        <li>crocheting</li>
+      </ul>
+    </section>
+
+    <section id="learning-plan" class="content-section">
+      <h2>My Learning Plan</h2>
+      <ol>
+        <li>attend lectures</li>
+        <li>study the material</li>
+        <li>practice what you've learned</li>
+      </ol>
+
+      <table>
+        <caption>My Weekly Learning Plan</caption>
+        <tr>
+          <th>Day</th>
+          <th>Topic</th>
+          <th>Practice Task</th>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td>HTML structure</td>
+          <td>Rebuild this page's sections from memory</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>CSS layout</td>
+          <td>Style a photo gallery using flexbox</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Forms and validation</td>
+          <td>Build a form with required fields and test it in the browser</td>
+        </tr>
+      </table>
+    </section>
+<section id="photos" class="content-section">
+  <h2>My Photos</h2>
+
+  <div id="gallery">
+    <figure>
+      <img src="images/A.jpeg" alt="looking at nature">
+      <figcaption>"nature"</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/N.jpeg" alt="having fun with my friend">
+      <figcaption>"fun"</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/T.jpeg" alt="randomly posing">
+      <figcaption>"posing"</figcaption>
+    </figure>
+  </div>
+
+  <div class="gallery-controls">
+    <button id="prev-photo" type="button">Previous</button>
+    <span id="photo-counter"></span>
+    <button id="next-photo" type="button">Next</button>
+  </div>
+</section>
+    <section id="media" class="content-section">
+      <h2>My Media</h2>
+
+      <h3>Introduction Video</h3>
+      <video controls>
+        <source src="video/X.MP4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Video summary: [write 1-2 sentences summarizing what you say in the video, so it's understandable without sound]</p>
+
+      <h3>Audio Clip</h3>
+      <audio controls>
+        <source src="video/V.mpeg" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+      <p>Recording summary: [your summary here]</p>
+    </section>
+
+    <section id="projects">
+  <h2>My Projects and Skills</h2>
+
+  <article class="project-card">
+    <h3>HTML Basics</h3>
+    <p>I learned how to structure a web page using headings, paragraphs, images, lists and tables.</p>
+  </article>
+
+  <article class="project-card">
+    <h3>Media on the Web</h3>
+    <p>I learned how to add pictures, video and audio to a page with controls and alt text.</p>
+  </article>
+
+  <article class="project-card">
+    <h3>CSS Styling</h3>
+    <p>I learned how to use colours, spacing and layout to make a page look neat and professional.</p>
+  </article>
+</section>
+
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+     <p><strong>Browser demonstration only — no message is sent.</strong></p>
+
+<form id="contact-form" novalidate>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+  <span class="error" id="name-error"></span>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+  <span class="error" id="email-error"></span>
+
+  <label for="topic">Topic</label>
+  <select id="topic" name="topic">
+    <option value="General question">General question</option>
+    <option value="Feedback">Feedback</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" required></textarea>
+  <span class="error" id="message-error"></span>
+
+  <button type="submit">Validate and Preview</button>
+</form>
+
+<div id="form-summary" aria-live="polite"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Natasha Nalomba</p>
+  </footer>
+<script src="js/script.js" defer></script>
+</body>
+</html>
